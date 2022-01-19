@@ -1,0 +1,44 @@
+.projects
+  padding-top: 80px
+  &-block
+    &__items
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      margin-top: 25px
+      margin-bottom: 75px
+      &:last-child
+        margin-bottom: 0
+    &__image
+      position: relative
+    &__title
+      height: 55px
+      background-color: #fff
+      display: flex
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      position: absolute
+      width: 85%
+      left: 50%
+      bottom: -20px
+      transform: translateX(-50%)
+      img
+        transition: 0.5s
+      &:hover img
+        margin-left: 5px
+        transition: 0.5s
+        
+    &__name 
+      font-family: 'Montserrat', sans-serif
+      font-weight: 500
+      font-style: normal
+      font-size: 18px
+      line-height: 25px
+      color: #000
+      margin-right: 20px
+    &__cards
+      display: flex
+      flex-direction: column
+      justify-content: space-between
