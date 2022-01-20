@@ -1,11 +1,4 @@
 
-// const swiper = new Swiper('.swiper', {
-//   direction: 'horizontal',  
-//   speed: 400,
-//   slidesPerView: "auto",
-//   spaceBetween: 10,      
-// });
-
 $(document).ready(function () {
   $("#cphone").mask("+7 (000) 000-00-00");
 })

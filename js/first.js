@@ -22,13 +22,13 @@ if (document.querySelector('#swiper-recall')) {
 };
 
 
-var swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".mySwiper", {
   spaceBetween: 10,
   slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true
 });
-var swiper2 = new Swiper(".mySwiper2", {
+const swiper2 = new Swiper(".mySwiper2", {
   spaceBetween: 50,
   slidesPerView: 1,
   centeredSlides: true,
