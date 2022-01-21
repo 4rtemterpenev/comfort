@@ -45,3 +45,13 @@ active.forEach(function (entry) {
   });
 });
 
+let herobtn = document.querySelector('.hero-block__btn')
+let modal = document.querySelector('.modal')
+let exit = document.querySelector('.modal-block__exit')
+
+herobtn.addEventListener('click', function(){
+  modal.classList.add('activity')
+})
+exit.addEventListener('click', function(){
+  modal.classList.remove('activity')
+})

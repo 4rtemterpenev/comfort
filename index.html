@@ -12,6 +12,48 @@
 
 <body>
   <header>
+  <!-- Модальное окно -->
+  <div class="modal">
+    <div class="modal-block">
+      <div class="modal-block__window">
+        <div class="modal-block__wrapper">
+          <div class="modal-block__head">
+            <div class="modal-block__logo">
+              <img src="img/form-logo.png" alt="">
+            </div>
+            <div class="modal-block__exit">
+              <img src="img/form-close.png" alt="">
+            </div>
+          </div>
+          <div class="modal-block__form">
+            <form action="#" class="form-block__action modal-window" id="form-block__action">
+              <span class="title fz18">оставьте <span class="color-text"> отзыв</span></span>
+              <div class="form-block__inputs">
+                <div class="form-block__input h20">
+                  <input type="text" placeholder="Ваше имя" id="name" name="cname">
+                </div>
+                <div class="form-block__input h20">
+                  <input type="text" placeholder="Номер телефона" id="cphone" name="cphone">
+                </div>
+                <div class="form-block__input h20">
+                  <input type="text" placeholder="Ваш email" id="email" name="cemail">
+                </div>                
+              </div>
+              <span class="modal-block__title">Определились с материалом?</span>
+              <div class="form-block__inputs">
+                <div class="form-block__input h20">
+                  <input type="text" placeholder="Ваше имя" id="name" name="cname">
+                </div>
+              </div>
+              <div class="form-block__btn mb">
+                <input type="submit" value="Заказать дом" id="submit" class="form-block__button orange disabled">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
     <section class="background">
       <div class="head">
         <div class="wrap">
@@ -229,16 +271,16 @@
               <div class="swiper mySwiper2">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img src="img/popular-image1.png" />
+                    <img src="img/popular-image1.png" class="border" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/popular-image1.png" />
+                    <img src="img/popular-image1.png" class="border"/>
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/popular-image1.png" />
+                    <img src="img/popular-image1.png" class="border"/>
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/popular-image2.png" />
+                    <img src="img/popular-image2.png" class="border"/>
                   </div>
                 </div>
                 <div class="swiper-pagination">
@@ -315,16 +357,16 @@
               <div class="swiper mySwiper2">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img src="img/popular-image1.png" />
+                    <img src="img/popular-image1.png" class="border" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/popular-image1.png" />
+                    <img src="img/popular-image1.png" class="border"/>
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/popular-image1.png" />
+                    <img src="img/popular-image1.png" class="border"/>
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/popular-image2.png" />
+                    <img src="img/popular-image2.png" class="border"/>
                   </div>
                 </div>
                 <div class="swiper-pagination">
@@ -379,10 +421,10 @@
               <a href="index.html">
                 <img src="img/footer-logo.png" alt="">
               </a>
-              <a href="#">Проекты</a>
+              <a href="projects.html">Проекты</a>
               <a href="services.html">Услуги</a>
-              <a href="#">О компании</a>
-              <a href="#">Контакты</a>
+              <a href="article.html">Полезные статьи</a>
+              <a href="about.html">О компании</a>
             </div>
             <div class="footer-block__social">
               <a href="#" target="_blank">
@@ -415,5 +457,6 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/jquery.mask.js"></script>
+<script src="js/validation.js"></script>
 
 </html>
