@@ -22,6 +22,7 @@ $('.form-block__action').validate({
     },
     area: {
       required: true,
+      maxlength: 10000
     }
   },
   messages: {
@@ -40,7 +41,7 @@ $('.form-block__action').validate({
     area: {
       required: 'Поле не заполнено',
       minlength: 'Минимум 10 символов',
-      maxlength: 'Максимум 100 символов'
+      maxlength: 'Максимум 10000 символов'
     }
   },
   onkeyup: function (element) {

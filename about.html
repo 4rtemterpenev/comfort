@@ -17,6 +17,9 @@
       <div class="head">
         <div class="wrap">
           <div class="head-block">
+            <div class="burger-menu">
+              <img src="img/menu-btn.png" alt="">
+            </div>
             <a href="index.html">
               <div class="head-block__logo">
                 <img src="img/head-logo.png" alt="">
@@ -42,6 +45,54 @@
       </div>
     </section>
   </header>
+  <!-- Burger-menu -->
+  <div class="menu" id="menu">
+    <div class="menu-block">
+      <nav class="menu-block__items">
+        <a href="index.html"><div class="menu-block__item">
+          <div class="menu-block__image">
+            <img src="img/burger-icon4.svg" alt="">
+          </div>
+          <span>Главная</span>
+        </div></a>
+        <a href="projects.html"><div class="menu-block__item">
+          <div class="menu-block__image">
+            <img src="img/burger-icon5.svg" alt="">
+          </div>
+          <span>Проекты</span>
+        </div></a>
+        <a href="services.html"><div class="menu-block__item">
+          <div class="menu-block__image">
+            <img src="img/burger-icon6.svg" alt="">
+          </div>
+          <span>Услуги</span>
+        </div></a>
+        <a href="about.html"><div class="menu-block__item">
+          <div class="menu-block__image">
+            <img src="img/burger-icon3.svg" alt="">
+          </div>
+          <span>О компании</span>
+        </div></a>
+        <a href="advice.html"><div class="menu-block__item">
+          <div class="menu-block__image">
+            <img src="img/burger-icon7.svg" alt="">
+          </div>
+          <span>Советы</span>
+        </div></a>
+        <a href="#" target="_blank"><div class="menu-block__item">
+          <div class="menu-block__image">
+            <img src="img/burger-icon1.svg" alt="">
+          </div>
+        </div></a>
+        <a href="#" target="_blank"><div class="menu-block__item">
+          <div class="menu-block__image">
+            <img src="img/burger-icon2.svg" alt="">
+          </div>
+        </div></a>
+      </nav>
+    </div>
+  </div>
+  <!--  -->
   <main>
     <section class="point">
       <div class="wrap">
@@ -104,6 +155,9 @@
       </div>
     </section>
     <section class="form">
+      <div class="form-block__image invis">
+        <img src="img/contact-image1.png" alt="">
+      </div>
       <div class="wrap">
         <div class="form-block">
           <form action="#" class="form-block__action" id="form-block__action">
@@ -121,13 +175,13 @@
             </div>
             <div class="form-block__textarea">
               <textarea name="area" id="" cols="30" rows="10" placeholder="Напишите нам" minlength="10"
-                maxlength="100"></textarea>
+                maxlength="10000"></textarea>
             </div>
             <div class="form-block__btn">
               <input type="submit" value="Отправить" id="submit" class="form-block__button disabled">
             </div>
           </form>
-          <div class="form-block__images">
+          <div class="form-block__images showd">
             <div class="form-block__image">
               <img src="img/contact-image1.png" alt="">
             </div>
@@ -141,18 +195,18 @@
     <section class="contacts">
       <div class="wrap">
         <div class="contacts-block">
-          <div class="contacts-block__address">
+          <div class="contacts-block__item">
             <span class="contacts-block__name">Адрес:</span>
             <span class="contacts-block__info">Москва,<br>
               ул.Стромынка, дом19, стр.2, 17076</span>
           </div>
-          <div class="contacts-block__phone">
+          <div class="contacts-block__item">
             <span class="contacts-block__name">Телефон</span>
             <span class="contacts-block__info">+7 (903) 185-55-47<br>
               Время работы: 10:00 - 18:00
               (пн - пт )</span>
           </div>
-          <div class="contacts-block__email">
+          <div class="contacts-block__item">
             <span class="contacts-block__name">Электронная почта</span>
             <span class="contacts-block__info">info@articomfort.ru</span>
           </div>
@@ -183,26 +237,43 @@
               <a href="#">О компании</a>
               <a href="#">Контакты</a>
             </div>
-            <div class="footer-block__social">
+            <div class="footer-block__social foothide">
               <a href="#" target="_blank">
                 <img src="img/facebook-icon.svg" alt="">
               </a>
               <a href="#" target="_blank">
-                <img src="img/twitter-icon.svg" alt="">
+                <img src="img/twitter-icon.svg" class="twitter" alt="">
               </a>
             </div>
-            <div class="footer-block__politic">
+            <div class="footer-block__politic foothide">
               <span>Все права защищены</span>
               <a href="#" target="_blank"><span>Политика конфиденциальности</span></a>
             </div>
           </div>
           <div class="footer-block__question">
             <span class="footer-block__title">Остались вопросы ?</span>
+            <div class="footer-block__call">
+              <div class="footer-block__vision">
+                <img src="img/phone-icon.svg" alt="">
+              </div>
             <span class="footer-block__pol">Позвоните нам,
               мы с радостью внесём ясность и ответим на все вопросы </span>
-            <div class="footer-block__btn">
+            </div>
+            <div class="footer-block__btn foothide">
               <a href="#">Позвонить</a>
             </div>
+          </div>
+          <div class="footer-block__social footvisible">
+            <a href="#" target="_blank">
+              <img src="img/facebook-icon.svg" alt="">
+            </a>
+            <a href="#" target="_blank">
+              <img src="img/twitter-icon.svg" class="twitter" alt="">
+            </a>
+          </div>
+          <div class="footer-block__politic footvis">
+            <span>Все права защищены</span>
+            <a href="#" target="_blank"><span>Политика конфиденциальности</span></a>
           </div>
         </div>
       </div>
@@ -213,7 +284,7 @@
   <script src="js/jquery.mask.js"></script>
   <script src="js/validation.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="js/first.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>

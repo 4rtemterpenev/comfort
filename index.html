@@ -6,58 +6,61 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <title>Главная</title>
 </head>
 
 <body>
   <header>
-  <!-- Модальное окно -->
-  <div class="modal">
-    <div class="modal-block">
-      <div class="modal-block__window">
-        <div class="modal-block__wrapper">
-          <div class="modal-block__head">
-            <div class="modal-block__logo">
-              <img src="img/form-logo.png" alt="">
+    <!-- Модальное окно -->
+    <div class="modal">
+      <div class="modal-block">
+        <div class="modal-block__window">
+          <div class="modal-block__wrapper">
+            <div class="modal-block__head">
+              <div class="modal-block__logo">
+                <img src="img/form-logo.png" alt="">
+              </div>
+              <div class="modal-block__exit">
+                <img src="img/form-close.png" alt="">
+              </div>
             </div>
-            <div class="modal-block__exit">
-              <img src="img/form-close.png" alt="">
+            <div class="modal-block__form">
+              <form action="#" class="form-block__action modal-window" id="form-block__action">
+                <span class="title fz16">оставьте свой номер,</span> <span class="color-text fz16"> мы перезвном
+                  вам</span>
+                <div class="form-block__inputs">
+                  <div class="form-block__input h20">
+                    <input type="text" placeholder="Ваше имя" id="name" name="cname">
+                  </div>
+                  <div class="form-block__input h20">
+                    <input type="text" placeholder="Ваш телефон" id="cphone" name="cphone">
+                  </div>
+                </div>
+                <span class="modal-block__title">Определились с материалом?</span>
+                <div class="form-block__inputs">
+                  <div class="form-block__input h20">
+                    <input type="text" placeholder="Ваше имя" id="name" name="cname">
+                  </div>
+                </div>
+                <div class="form-block__btn">
+                  <input type="submit" value="Отправить" id="submit" class="form-block__button small disabled">
+                </div>
+              </form>
             </div>
-          </div>
-          <div class="modal-block__form">
-            <form action="#" class="form-block__action modal-window" id="form-block__action">
-              <span class="title fz18">оставьте <span class="color-text"> отзыв</span></span>
-              <div class="form-block__inputs">
-                <div class="form-block__input h20">
-                  <input type="text" placeholder="Ваше имя" id="name" name="cname">
-                </div>
-                <div class="form-block__input h20">
-                  <input type="text" placeholder="Номер телефона" id="cphone" name="cphone">
-                </div>
-                <div class="form-block__input h20">
-                  <input type="text" placeholder="Ваш email" id="email" name="cemail">
-                </div>                
-              </div>
-              <span class="modal-block__title">Определились с материалом?</span>
-              <div class="form-block__inputs">
-                <div class="form-block__input h20">
-                  <input type="text" placeholder="Ваше имя" id="name" name="cname">
-                </div>
-              </div>
-              <div class="form-block__btn mb">
-                <input type="submit" value="Заказать дом" id="submit" class="form-block__button orange disabled">
-              </div>
-            </form>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    <!--  -->
     <section class="background">
+      <img src="img/hero-image1.png" class="fon" alt="">
       <div class="head">
         <div class="wrap">
           <div class="head-block">
+            <div class="burger-menu">
+              <img src="img/menu-btn.png" alt="">
+            </div>
             <a href="index.html">
               <div class="head-block__logo">
                 <img src="img/head-logo.png" alt="">
@@ -74,11 +77,10 @@
           </div>
         </div>
       </div>
-      <div class="hero">
-        <img src="img/hero-image12.png" class="fon" alt="">
+      <div class="hero center">
         <div class="wrap">
           <div class="hero-block">
-            <h1>Articomfort -
+            <h1> <span> Articomfort </span>-
               современные технологии комфорта</h1>
             <div class="hero-block__btn">
               <a href="#">Заказать дом</a>
@@ -88,6 +90,67 @@
       </div>
     </section>
   </header>
+  <!-- Burger-menu -->
+  <div class="menu" id="menu">
+    <div class="menu-block">
+      <nav class="menu-block__items">
+        <a href="index.html">
+          <div class="menu-block__item">
+            <div class="menu-block__image">
+              <img src="img/burger-icon4.svg" alt="">
+            </div>
+            <span>Главная</span>
+          </div>
+        </a>
+        <a href="projects.html">
+          <div class="menu-block__item">
+            <div class="menu-block__image">
+              <img src="img/burger-icon5.svg" alt="">
+            </div>
+            <span>Проекты</span>
+          </div>
+        </a>
+        <a href="services.html">
+          <div class="menu-block__item">
+            <div class="menu-block__image">
+              <img src="img/burger-icon6.svg" alt="">
+            </div>
+            <span>Услуги</span>
+          </div>
+        </a>
+        <a href="about.html">
+          <div class="menu-block__item">
+            <div class="menu-block__image">
+              <img src="img/burger-icon3.svg" alt="">
+            </div>
+            <span>О компании</span>
+          </div>
+        </a>
+        <a href="advice.html">
+          <div class="menu-block__item">
+            <div class="menu-block__image">
+              <img src="img/burger-icon7.svg" alt="">
+            </div>
+            <span>Советы</span>
+          </div>
+        </a>
+        <a href="#" target="_blank">
+          <div class="menu-block__item">
+            <div class="menu-block__image">
+              <img src="img/burger-icon1.svg" alt="">
+            </div>
+          </div>
+        </a>
+        <a href="#" target="_blank">
+          <div class="menu-block__item">
+            <div class="menu-block__image">
+              <img src="img/burger-icon2.svg" alt="">
+            </div>
+          </div>
+        </a>
+      </nav>
+    </div>
+  </div>
   <main>
     <section class="projects">
       <div class="wrap">
@@ -101,7 +164,7 @@
                   <a href="#">
                     <div class="projects-block__title big">
                       <span class="projects-block__name bigT">Из профилированного бруса</span>
-                      <img src="img/Vector (11).svg" alt="">
+                      <img src="img/arrow-icon.svg" alt="">
                     </div>
                   </a>
                 </div>
@@ -113,7 +176,7 @@
                     <a href="#">
                       <div class="projects-block__title">
                         <span class="projects-block__name">Бани</span>
-                        <img src="img/Vector (11).svg" alt="">
+                        <img src="img/arrow-icon.svg" alt="">
                       </div>
                     </a>
                   </div>
@@ -124,7 +187,7 @@
                     <a href="#">
                       <div class="projects-block__title">
                         <span class="projects-block__name">Из клеенного бруса</span>
-                        <img src="img/Vector (11).svg" alt="">
+                        <img src="img/arrow-icon.svg" alt="">
                       </div>
                     </a>
                   </div>
@@ -138,7 +201,7 @@
                   <a href="#">
                     <div class="projects-block__title">
                       <span class="projects-block__name">Комбинированные дома</span>
-                      <img src="img/Vector (11).svg" alt="">
+                      <img src="img/arrow-icon.svg" alt="">
                     </div>
                   </a>
                 </div>
@@ -149,7 +212,7 @@
                   <a href="#">
                     <div class="projects-block__title">
                       <span class="projects-block__name">Каркасные дома</span>
-                      <img src="img/Vector (11).svg" alt="">
+                      <img src="img/arrow-icon.svg" alt="">
                     </div>
                   </a>
                 </div>
@@ -160,7 +223,7 @@
                   <a href="#">
                     <div class="projects-block__title">
                       <span class="projects-block__name">Из газобетона</span>
-                      <img src="img/Vector (11).svg" alt="">
+                      <img src="img/arrow-icon.svg" alt="">
                     </div>
                   </a>
                 </div>
@@ -170,6 +233,38 @@
         </div>
       </div>
     </section>
+    <!-- Модальное окно отзывов -->
+    <div class="recallmodal">
+      <div class="recallmodal-block">
+        <div class="recallmodal-block__window">
+          <div class="recallmodal-block__wrapper">
+            <div class="recallmodal-block__head">
+              <span>Андрей Иванов</span>
+              <div class="recallmodal-block__exit">
+                <img src="img/close-icon.png" alt="">
+              </div>
+            </div>
+            <div class="recallmodal-block__info">
+              <p>
+                &laquo;Давно хотел воплотить в&nbsp;жизнь свой дом, компания ArtiComfort сделала работу так, как никто
+                никогда не
+                сделал. Сотрудники создали технический шедевр. Проект был достаточно сложным, но&nbsp;теперь
+                я&nbsp;засыпаю в&nbsp;доме
+                мечты и&nbsp;за&nbsp;это я&nbsp;благодарен компании.
+                Оставил свои данные, и&nbsp;в&nbsp;течение десяти минут, мне перезвонил менеджер, и&nbsp;готов был
+                принять первые
+                пожелания по&nbsp;проекту. Я&nbsp;не&nbsp;знал из&nbsp;чего хотел строить. Но&nbsp;менеджер рассказал
+                мне, о&nbsp;материалах&nbsp;и, самое
+                важное, о&nbsp;том, какие материалы сейчас обойдутся дешевле. Для меня этот вопрос был очень важен.
+                И&nbsp;спустя
+                8&nbsp;месяцев от&nbsp;звонка, мой дом уже стоит !&raquo;
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
     <section class="recall">
       <div class="wrap" id="wrap">
         <span class="title">Отзывы <span class="color-text"> клиентов</span></span>
@@ -187,7 +282,7 @@
                     но&nbsp;теперь
                     я&nbsp;засыпаю в&nbsp;доме мечты и&nbsp;за&nbsp;это я&nbsp;благодарен компании...&raquo;</p>
                 </div>
-                <a href="#"><span class="recall-block__readmore">читать полный отзыв</span></a>
+                <div class="recall-block__readmore"><span>читать полный отзыв</span></div>
               </div>
             </div>
             <div class="swiper-slide shadow">
@@ -200,7 +295,7 @@
                     но&nbsp;теперь
                     я&nbsp;засыпаю в&nbsp;доме мечты и&nbsp;за&nbsp;это я&nbsp;благодарен компании...&raquo;</p>
                 </div>
-                <a href="#"><span class="recall-block__readmore">читать полный отзыв</span></a>
+                <div class="recall-block__readmore"><span>читать полный отзыв</span></div>
               </div>
             </div>
             <div class="swiper-slide shadow">
@@ -213,7 +308,7 @@
                     но&nbsp;теперь
                     я&nbsp;засыпаю в&nbsp;доме мечты и&nbsp;за&nbsp;это я&nbsp;благодарен компании...&raquo;</p>
                 </div>
-                <a href="#"><span class="recall-block__readmore">читать полный отзыв</span></a>
+                <div class="recall-block__readmore"><span>читать полный отзыв</span></div>
               </div>
             </div>
             <div class="swiper-slide shadow">
@@ -226,7 +321,7 @@
                     но&nbsp;теперь
                     я&nbsp;засыпаю в&nbsp;доме мечты и&nbsp;за&nbsp;это я&nbsp;благодарен компании...&raquo;</p>
                 </div>
-                <a href="#"><span class="recall-block__readmore">читать полный отзыв</span></a>
+                <div class="recall-block__readmore"><span>читать полный отзыв</span></div>
               </div>
             </div>
             <div class="swiper-slide shadow">
@@ -239,7 +334,7 @@
                     но&nbsp;теперь
                     я&nbsp;засыпаю в&nbsp;доме мечты и&nbsp;за&nbsp;это я&nbsp;благодарен компании...&raquo;</p>
                 </div>
-                <a href="#"><span class="recall-block__readmore">читать полный отзыв</span></a>
+                <div class="recall-block__readmore"><span>читать полный отзыв</span></div>
               </div>
             </div>
             <div class="swiper-slide shadow">
@@ -252,7 +347,7 @@
                     но&nbsp;теперь
                     я&nbsp;засыпаю в&nbsp;доме мечты и&nbsp;за&nbsp;это я&nbsp;благодарен компании...&raquo;</p>
                 </div>
-                <a href="#"><span class="recall-block__readmore">читать полный отзыв</span></a>
+                <div class="recall-block__readmore"><span>читать полный отзыв</span></div>
               </div>
             </div>
           </div>
@@ -274,20 +369,16 @@
                     <img src="img/popular-image1.png" class="border" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/popular-image1.png" class="border"/>
+                    <img src="img/popular-image1.png" class="border" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/popular-image1.png" class="border"/>
+                    <img src="img/popular-image1.png" class="border" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/popular-image2.png" class="border"/>
+                    <img src="img/popular-image2.png" class="border" />
                   </div>
                 </div>
                 <div class="swiper-pagination">
-                  <img class="swiper_pagination_img" src="img/popular-image1.png">
-                  <img class="swiper_pagination_img" src="img/popular-image1.png">
-                  <img class="swiper_pagination_img" src="img/popular-image1.png">
-                  <img class="swiper_pagination_img" src="img/popular-image2.png">
                 </div>
               </div>
             </div>
@@ -315,7 +406,7 @@
                 </div>
                 <div class="popular-block__value">
                   <span class="popular-block__price"><span class="small-text">от</span> 3 320 500</span> <img
-                    src="img/Vector (14).svg" alt="">
+                    src="img/ruble-icon.svg" alt="">
                 </div>
               </div>
             </div>
@@ -349,7 +440,7 @@
                 </div>
                 <div class="popular-block__value">
                   <span class="popular-block__price"><span class="small-text">от</span> 3 320 500</span> <img
-                    src="img/Vector (14).svg" alt="">
+                    src="img/ruble-icon.svg" alt="">
                 </div>
               </div>
             </div>
@@ -360,20 +451,16 @@
                     <img src="img/popular-image1.png" class="border" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/popular-image1.png" class="border"/>
+                    <img src="img/popular-image1.png" class="border" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/popular-image1.png" class="border"/>
+                    <img src="img/popular-image1.png" class="border" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="img/popular-image2.png" class="border"/>
+                    <img src="img/popular-image2.png" class="border" />
                   </div>
                 </div>
                 <div class="swiper-pagination">
-                  <img class="swiper_pagination_img" src="img/popular-image1.png">
-                  <img class="swiper_pagination_img" src="img/popular-image1.png">
-                  <img class="swiper_pagination_img" src="img/popular-image1.png">
-                  <img class="swiper_pagination_img" src="img/popular-image2.png">
                 </div>
               </div>
             </div>
@@ -384,18 +471,18 @@
     <section class="contacts">
       <div class="wrap">
         <div class="contacts-block">
-          <div class="contacts-block__address">
+          <div class="contacts-block__item">
             <span class="contacts-block__name">Адрес:</span>
             <span class="contacts-block__info">Москва,<br>
               ул.Стромынка, дом19, стр.2, 17076</span>
           </div>
-          <div class="contacts-block__phone">
+          <div class="contacts-block__item">
             <span class="contacts-block__name">Телефон</span>
             <span class="contacts-block__info">+7 (903) 185-55-47<br>
               Время работы: 10:00 - 18:00
               (пн - пт )</span>
           </div>
-          <div class="contacts-block__email">
+          <div class="contacts-block__item">
             <span class="contacts-block__name">Электронная почта</span>
             <span class="contacts-block__info">info@articomfort.ru</span>
           </div>
@@ -421,12 +508,12 @@
               <a href="index.html">
                 <img src="img/footer-logo.png" alt="">
               </a>
-              <a href="projects.html">Проекты</a>
+              <a href="#">Проекты</a>
               <a href="services.html">Услуги</a>
-              <a href="article.html">Полезные статьи</a>
-              <a href="about.html">О компании</a>
+              <a href="#">О компании</a>
+              <a href="#">Контакты</a>
             </div>
-            <div class="footer-block__social">
+            <div class="footer-block__social foothide">
               <a href="#" target="_blank">
                 <img src="img/facebook-icon.svg" alt="">
               </a>
@@ -434,18 +521,35 @@
                 <img src="img/twitter-icon.svg" alt="">
               </a>
             </div>
-            <div class="footer-block__politic">
+            <div class="footer-block__politic foothide">
               <span>Все права защищены</span>
               <a href="#" target="_blank"><span>Политика конфиденциальности</span></a>
             </div>
           </div>
           <div class="footer-block__question">
             <span class="footer-block__title">Остались вопросы ?</span>
-            <span class="footer-block__pol">Позвоните нам,
-              мы с радостью внесём ясность и ответим на все вопросы </span>
-            <div class="footer-block__btn">
+            <div class="footer-block__call">
+              <div class="footer-block__vision">
+                <img src="img/phone-icon.svg" alt="">
+              </div>
+              <span class="footer-block__pol">Позвоните нам,
+                мы с радостью внесём ясность и ответим на все вопросы </span>
+            </div>
+            <div class="footer-block__btn foothide">
               <a href="#">Позвонить</a>
             </div>
+          </div>
+          <div class="footer-block__social footvisible">
+            <a href="#" target="_blank">
+              <img src="img/facebook-icon.svg" alt="">
+            </a>
+            <a href="#" target="_blank">
+              <img src="img/twitter-icon.svg" class="twitter" alt="">
+            </a>
+          </div>
+          <div class="footer-block__politic footvis">
+            <span>Все права защищены</span>
+            <a href="#" target="_blank"><span>Политика конфиденциальности</span></a>
           </div>
         </div>
       </div>
@@ -453,7 +557,7 @@
   </footer>
 </body>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="js/first.js"></script>
+<script src="js/index.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/jquery.mask.js"></script>

@@ -4,7 +4,7 @@
   justify-content: space-between
   align-items: center
   text-align: center
-  height: 120px
+  height: 100px
   &__nav
     ul
       list-style: none
@@ -48,3 +48,43 @@ header
   justify-content: center
   width: 100%
   transition: 0.7s
+@media (max-width: 1250px)
+  .head
+    &-block
+      &__nav
+        ul
+          li
+            margin-right: 40px
+@media (max-width: 1100px)
+  .head
+    &-block
+      &__nav
+        ul
+          li
+            font-size: 20px
+            line-height: 26px
+@media (max-width: 1000px)
+  .head
+    &-block
+      &__nav
+        ul
+          li
+            margin-right: 20px
+@media (max-width: 900px)
+  .head
+    &-block
+      &__logo
+        width: 100%
+        img
+          width: 80%
+@media (max-width: 870px)
+  .head
+    &-block
+      display: flex
+      justify-content: center
+      &__nav
+        display: none
+      &__logo
+        width: 100%
+        img
+          width: 100%

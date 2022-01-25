@@ -1,4 +1,4 @@
-.modal
+.recallmodal
   position: relative
   z-index: 1000
   display: none
@@ -13,33 +13,28 @@
     justify-content: center
     align-items: center
     &__window
-      width: 23%
-      height: 70%
+      width: 27%
+      padding: 20px
+      height: max-content
       background-color: #fff
-      border-radius: 20px
-      overflow: auto
-    &__wrapper
-      width: 90%
-      margin: 0 auto
-      height: 90%
+      overflow-y: auto
     &__head
       display: flex
       flex-direction: row
       justify-content: space-between
-      margin-top: 10px
       align-items: center
-    &__form
-      display: flex
-      justify-content: center
-      height: 100%
-    &__title
+      span
+        font-family: 'Montserrat', sans-serif
+        font-weight: 500
+        font-size: 24px
+        line-height: 33px
+        color: #000
+    &__info p
       font-family: 'Montserrat', sans-serif
-      font-weight: 400
-      font-size: 14px
-      line-height: 20px
-      color: #0B5C0B
-      display: flex
-      justify-content: center
-      margin-top: 30px
+      font-style: italic
+      font-weight: 400px
+      font-size: 18px
+      line-height: 24px
+      color: #000
     &__exit
       cursor: pointer

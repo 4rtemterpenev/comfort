@@ -6,8 +6,8 @@
   font-family: 'comic', sans-serif
   font-weight: 900
 .title
-  font-family: "Montserrat", sans-serif
-  font-weight: 700
+  font-family: "comic", sans-serif
+  font-weight: 900
   font-size: 36px
   line-height: 50px
   font-style: normal
@@ -45,7 +45,7 @@
   border-radius: 36px
   opacity: 0
   width: 100%
-  height: 457px
+  height: 100%
   position: absolute
   z-index: 10
   top: 0
@@ -67,6 +67,9 @@
   background: rgba(0,0 ,0 ,0.2)
 .block
   padding-top: 50px
+  margin-bottom: 50px
+  &:last-child
+    margin-bottom: 0
 .active
   border: 1px solid #FC6805 !important
   img
@@ -91,6 +94,7 @@
   flex-direction: column
   justify-content: center
   align-items: center
+  height: 100%
 .h20 .error
   font-size: 14px
 .fz18
@@ -103,9 +107,73 @@
 .orange
   border: 1px solid #FC6805 !important
   color: #FC6805 !important
+.small
+  font-size: 18px !important
+.fz16
+  font-size: 16px
+  margin-bottom: 0
+  font-family: 'Montserrat', sans-serif
+  text-transform: uppercase
+  font-weight: 700
+  line-height: 22px
 .mb
   margin-top: 20px !important
   display: flex
   justify-content: center
 .activity
   display: block !important
+.twitter
+  transform: translateY(5px)
+.show
+  display: block !important
+.burger-menu
+  position: fixed
+  left: 10px
+  top: 20px
+  display: none
+.invis
+  display: none
+.footvisible
+  display: none !important
+.burgershow
+  transform: translateX(0) !important
+.footvis
+  display: none
+@media (max-width: 1250px)
+  .wrap
+    width: 90%
+@media (max-width: 870px)
+  .burger-menu
+    display: block
+@media (max-width: 720px)
+  .foothide
+    display: none !important
+@media (max-width: 500px)
+  .title
+    font-size: 18px
+    line-height: 25px
+  .text
+    font-size: 14px
+  .about
+    margin-top: 20px !important
+  .showd
+    display: none
+  .invis
+    display: block
+  .map >div
+    height: 300px
+  .error
+    font-size: 12px
+    padding-left: 20px
+@media (min-width: 992px)
+  html,
+  body
+    scrollbar-color: #d6d6d6 #F4F5F8
+    scrollbar-width: thin
+    &::-webkit-scrollbar
+      width: 5px
+      height: 8px
+      background-color: #F4F5F8
+    &::-webkit-scrollbar-thumb
+      background-color: #d6d6d6
+      border-radius: 3px
