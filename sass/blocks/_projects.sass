@@ -42,3 +42,67 @@
       display: flex
       flex-direction: column
       justify-content: space-between
+
+
+@media (max-width: 1300px)
+  .projects
+    &-block
+      &__item
+        width: 30%
+      &__cards
+        flex-direction: row
+        justify-content: center
+        margin-top: 70px
+  .bigitem
+    width: 100%
+  .first
+    flex-direction: column
+  .projects-block__cards .projects-block__item
+    margin-right: 30px
+    &:last-child
+      margin-right: 0
+
+@media (max-width: 1100px)
+  .projects
+    &-block
+      &__name
+        font-size: 16px
+        margin-right: 10px
+  .bigT
+    font-size: 20px !important
+
+@media (max-width: 1050px)
+  .projects
+    &-block
+      &__items
+        flex-direction: column
+        margin-bottom: 0
+        margin-top: 0
+      &__cards
+        flex-direction: column
+        margin-top: 0
+      &__item
+        width: 100%
+        margin-bottom: 70px
+  .first
+    margin-top: 20px
+
+@media (max-width: 600px)
+  .projects
+    padding-top: 20px
+    &-block
+      &__name
+        font-size: 14px
+        line-height: 20px
+      &__title
+        img
+          width: 3%
+        height: 35px
+        bottom: -15px
+      &__item
+        margin-bottom: 45px
+  .bigT
+    font-size: 14px !important
+  .big
+    height: 40px !important
+    bottom: -15px !important

@@ -61,13 +61,13 @@ let modal = document.querySelector('.modal')
 let exit = document.querySelector('.modal-block__exit')
 
 if (herobtn) {
-  addEventListener('click', function () {
-    modal.classList.toggle('activity')
+  herobtn.addEventListener('click', function () {
+    modal.classList.add('activity')
     document.body.style.overflow = "hidden"
   })
 }
 if (exit) {
-  addEventListener('click', function () {
+  exit.addEventListener('click', function () {
     modal.classList.remove('activity')
     document.body.style.overflow = "visible"
   })
@@ -88,7 +88,7 @@ if (openmodal)
   });
 
 if (exitmodal) {
-  addEventListener('click', function () {
+  exitmodal.addEventListener('click', function () {
     recallmodal.classList.remove('show')
     document.body.style.overflow = "visible"
   })
@@ -99,13 +99,24 @@ let menu = document.querySelector('.menu')
 let menublock = document.querySelector('.menu-block')
 
 if (menuBtn) {
-  addEventListener('click', function () {
+  menuBtn.addEventListener('click', function () {
     menu.classList.add('burgershow')
   })
 }
 
 if (menu) {
-  addEventListener('click', function () {
+  menu.addEventListener('click', function () {
     menu.classList.remove('burgershow')
   })
 }
+
+const faqItem = document.querySelectorAll('.point-block__item')
+
+if (faqItem)
+  faqItem.forEach(function (open) {
+    let faqHead = open.querySelector('.point-block__title')
+    let faqBody = open.querySelector('.point-block__info')
+    faqHead.addEventListener('click', function () {
+      faqBody.classList.toggle('active')
+    });
+  });

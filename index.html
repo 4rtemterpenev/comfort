@@ -157,10 +157,10 @@
         <div class="projects-block">
           <span class="title">Каталог наших <span class="color-text"> проектов</span></span>
           <div class="projects-block__wrap">
-            <div class="projects-block__items">
-              <div class="projects-block__item">
+            <div class="projects-block__items first">
+              <div class="projects-block__item bigitem">
                 <div class="projects-block__image">
-                  <img src="img/project-image1.png" alt="">
+                  <img src="img/project-image1.png" class="image" alt="">
                   <a href="#">
                     <div class="projects-block__title big">
                       <span class="projects-block__name bigT">Из профилированного бруса</span>
@@ -172,7 +172,7 @@
               <div class="projects-block__cards">
                 <div class="projects-block__item">
                   <div class="projects-block__image">
-                    <img src="img/project-image2.png" alt="">
+                    <img src="img/project-image2.png" class="image" alt="">
                     <a href="#">
                       <div class="projects-block__title">
                         <span class="projects-block__name">Бани</span>
@@ -183,7 +183,7 @@
                 </div>
                 <div class="projects-block__item">
                   <div class="projects-block__image">
-                    <img src="img/project-image3.png" alt="">
+                    <img src="img/project-image3.png" class="image" alt="">
                     <a href="#">
                       <div class="projects-block__title">
                         <span class="projects-block__name">Из клеенного бруса</span>
@@ -197,7 +197,7 @@
             <div class="projects-block__items">
               <div class="projects-block__item">
                 <div class="projects-block__image">
-                  <img src="img/project-image4.png" alt="">
+                  <img src="img/project-image4.png"  class="image" alt="">
                   <a href="#">
                     <div class="projects-block__title">
                       <span class="projects-block__name">Комбинированные дома</span>
@@ -208,7 +208,7 @@
               </div>
               <div class="projects-block__item">
                 <div class="projects-block__image">
-                  <img src="img/project-image5.png" alt="">
+                  <img src="img/project-image5.png" class="image" alt="">
                   <a href="#">
                     <div class="projects-block__title">
                       <span class="projects-block__name">Каркасные дома</span>
@@ -219,7 +219,7 @@
               </div>
               <div class="projects-block__item">
                 <div class="projects-block__image">
-                  <img src="img/project-image6.png" alt="">
+                  <img src="img/project-image6.png" class="image" alt="">
                   <a href="#">
                     <div class="projects-block__title">
                       <span class="projects-block__name">Из газобетона</span>
@@ -362,6 +362,7 @@
       <section class="block">
         <div class="wrap">
           <div class="popular-block">
+            <span class="popular-block__title active">Баня Рибера</span>
             <div class="popular-block__slider">
               <div class="swiper mySwiper2">
                 <div class="swiper-wrapper">
@@ -383,7 +384,7 @@
               </div>
             </div>
             <div class="popular-block__info">
-              <span class="popular-block__title">Баня Рибера</span>
+              <span class="popular-block__title disabled">Баня Рибера</span>
               <div class="popular-block__characteristic">
                 <span class="popular-block__name">92 м²</span>
                 <span class="popular-block__name">Из клееного бруса</span>
@@ -413,7 +414,7 @@
           </div>
         </div>
       </section>
-      <section class="block">
+      <section class="block disabled">
         <div class="wrap">
           <div class="popular-block">
             <div class="popular-block__info">
@@ -557,10 +558,11 @@
   </footer>
 </body>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="js/index.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/jquery.mask.js"></script>
 <script src="js/validation.js"></script>
+<script src="js/index.js"></script>
+
 
 </html>

@@ -16,6 +16,7 @@
     line-height: 50px
     text-decoration: underline
     display: block
+    color: #000
   &__name
     font-family: 'Montserrat', sans-serif
     font-weight: 500
@@ -72,6 +73,7 @@
   img
     width: 100%
     object-fit: cover
+    height: 100%
 .mySwiper2 .swiper-wrapper
   height: 80%
 .swiper-pagination img
@@ -88,3 +90,103 @@
   flex-direction: row
   justify-content: center
   margin-top: 20px
+.popular-block__title.active
+  display: none
+.popular-block__title.disabled
+.popular-block__slider.active
+  display: none
+
+@media (max-width: 1300px)
+  .mySwiper2 .swiper-slide
+    width: 100%
+    min-width: 100%
+  .popular-block__info
+    width: 60%
+  .popular-block__slider
+    width: 40%
+@media (max-width: 1000px)
+  .popular
+    &-block
+      flex-direction: column
+      height: auto
+      align-items: center
+      &__slider
+        width: 70%
+        justify-content: center
+        display: flex
+        align-items: center
+      &__title
+        margin-bottom: 20px
+  .popular-block .popular-block__info
+    align-items: start 
+    width: 100%
+@media (max-width: 600px)
+  .popular
+    padding-top: 50px
+    &-block
+      &__slider
+        width: 100%
+        justify-content: center
+        display: flex
+        align-items: center
+        margin-right: 0
+      &__title
+        margin-bottom: 20px
+      &__name
+        font-size: 20px
+        line-height: 26px
+      &__title
+        font-size: 32px
+        line-height: 40px
+      &__price
+        font-size: 32px
+  .popular-block .popular-block__info
+    align-items: start 
+    width: 100%
+  .mySwiper2 .swiper-wrapper
+    height: 80%
+  .left
+    margin-left: 0
+    margin-top: 30px
+  .block
+    padding-top: 0
+@media (max-width: 500px)
+  .popular
+    &-block
+      &__name
+        font-size: 14px
+        line-height: 20px
+        margin-right: 5px
+      &__price
+        display: none
+      &__value
+        display: none
+      &__buy
+        justify-content: center
+      &__btn a
+        padding: 5px 50px 5px 50px
+  .block.disabled
+    display: none
+  .popular-block__title.disabled
+    display: none
+  .popular-block__title.active
+    display: block
+    border: none !important
+    font-size: 18px
+    line-height: 25px
+    text-align: left
+    display: flex
+    justify-content: start
+    width: 100%
+  .popular-block__slider.active
+    border: none !important
+    margin-top: 0
+  .popular-block__slider.disabled
+    display: none
+@media (max-width: 375px)
+  .popular
+    &-block
+      &__name
+        font-size: 12px
+        line-height: 16px
+      
