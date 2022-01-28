@@ -121,7 +121,7 @@ if (menu) {
 //     });
 //   });
 
-
+//Валидация
 $(document).ready(function () {
   $("#cphone").mask("+7 (000) 000-00-00");
 })
@@ -187,6 +187,8 @@ $('.form-block__action').validate({
   },
 });
 
+//Выбор фильтра
+
 function toggleClass(elem,className){
   if (elem.className.indexOf(className) !== -1){
     elem.className = elem.className.replace(className,'');
@@ -219,22 +221,19 @@ function handleOptionSelected(e){
   titleElem.textContent = newValue;
   titleElem.appendChild(icon);
 
-  //trigger custom event
   document.querySelector('.dropdown .titleitems').dispatchEvent(new Event('change'));
-    //setTimeout is used so transition is properly shown
   setTimeout(() => toggleClass(icon,'rotate-90',0));
 }
 
 
-//get elements
 const dropdownTitle = document.querySelector('.dropdown .titleitems');
 const dropdownOptions = document.querySelectorAll('.dropdown .option');
 
-//bind listeners to these elements
 dropdownTitle.addEventListener('click', toggleMenuDisplay);
 
 dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected));
 
+//открытие фильтра
 
 let modalProjectClose = document.querySelector('.modalitems-block__exit')
 let modalProjectOpen = document.querySelector('.items-block__change')
