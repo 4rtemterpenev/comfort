@@ -110,7 +110,7 @@ if (menu) {
   })
 }
 
-// const faqItem = document.querySelectorAll('.point-block__item')
+const faqItem = document.querySelectorAll('.point-block__item')
 
 // if (faqItem)
 //   faqItem.forEach(function (open) {
@@ -189,28 +189,28 @@ $('.form-block__action').validate({
 
 //Выбор фильтра
 
-function toggleClass(elem,className){
-  if (elem.className.indexOf(className) !== -1){
-    elem.className = elem.className.replace(className,'');
+function toggleClass(elem, className) {
+  if (elem.className.indexOf(className) !== -1) {
+    elem.className = elem.className.replace(className, '');
   }
-  else{
-    elem.className = elem.className.replace(/\s+/g,' ') + 	' ' + className;
+  else {
+    elem.className = elem.className.replace(/\s+/g, ' ') + ' ' + className;
   }
 
   return elem;
 }
 
-function toggleMenuDisplay(e){
+function toggleMenuDisplay(e) {
   const dropdown = e.currentTarget.parentNode;
   const menu = dropdown.querySelector('.menuitems');
   const icon = dropdown.querySelector('.fa-angle-right');
 
-  toggleClass(menu,'hide');
-  toggleClass(icon,'rotate-90');
+  toggleClass(menu, 'hide');
+  toggleClass(icon, 'rotate-90');
 }
 
-function handleOptionSelected(e){
-  toggleClass(e.target.parentNode, 'hide');			
+function handleOptionSelected(e) {
+  toggleClass(e.target.parentNode, 'hide');
 
   const id = e.target.id;
   const newValue = e.target.textContent + ' ';
@@ -222,7 +222,7 @@ function handleOptionSelected(e){
   titleElem.appendChild(icon);
 
   document.querySelector('.dropdown .titleitems').dispatchEvent(new Event('change'));
-  setTimeout(() => toggleClass(icon,'rotate-90',0));
+  setTimeout(() => toggleClass(icon, 'rotate-90', 0));
 }
 
 
@@ -231,7 +231,7 @@ const dropdownOptions = document.querySelectorAll('.dropdown .option');
 
 dropdownTitle.addEventListener('click', toggleMenuDisplay);
 
-dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected));
+dropdownOptions.forEach(option => option.addEventListener('click', handleOptionSelected));
 
 //открытие фильтра
 
@@ -239,13 +239,13 @@ let modalProjectClose = document.querySelector('.modalitems-block__exit')
 let modalProjectOpen = document.querySelector('.items-block__change')
 let modalProject = document.querySelector('.modalitems')
 
-if(modalProjectOpen)
-  modalProjectOpen.addEventListener('click', function(){
+if (modalProjectOpen)
+  modalProjectOpen.addEventListener('click', function () {
     modalProject.classList.toggle('active')
     document.body.style.overflow = "hidden"
   })
-if(modalProjectClose)
-  modalProjectClose.addEventListener('click', function(){
+if (modalProjectClose)
+  modalProjectClose.addEventListener('click', function () {
     modalProject.classList.remove('active')
     document.body.style.overflow = "visible"
   })
