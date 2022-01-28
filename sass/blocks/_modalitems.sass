@@ -50,10 +50,14 @@
   color: #000
   display: flex
   justify-content: space-between
+  img
+    width: 20px
 .dropdown .option
   margin-bottom: 10px
   font-family: 'Montserrat', sans-serif
   font-weight: 500
+  cursor: pointer
+  font-size: 14px
   &:last-child
     margin-bottom: 0
   &:first-child
@@ -66,3 +70,6 @@
   color: #000
 .rotate-90
   transform: rotate(90deg)
+@media (max-width: 500px)
+  .dropdown .titleitems
+    font-size: 18px
