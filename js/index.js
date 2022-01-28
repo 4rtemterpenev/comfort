@@ -186,3 +186,67 @@ $('.form-block__action').validate({
     }
   },
 });
+
+function toggleClass(elem,className){
+  if (elem.className.indexOf(className) !== -1){
+    elem.className = elem.className.replace(className,'');
+  }
+  else{
+    elem.className = elem.className.replace(/\s+/g,' ') + 	' ' + className;
+  }
+
+  return elem;
+}
+
+function toggleMenuDisplay(e){
+  const dropdown = e.currentTarget.parentNode;
+  const menu = dropdown.querySelector('.menuitems');
+  const icon = dropdown.querySelector('.fa-angle-right');
+
+  toggleClass(menu,'hide');
+  toggleClass(icon,'rotate-90');
+}
+
+function handleOptionSelected(e){
+  toggleClass(e.target.parentNode, 'hide');			
+
+  const id = e.target.id;
+  const newValue = e.target.textContent + ' ';
+  const titleElem = document.querySelector('.dropdown .titleitems');
+  const icon = document.querySelector('.dropdown .titleitems .fa');
+
+
+  titleElem.textContent = newValue;
+  titleElem.appendChild(icon);
+
+  //trigger custom event
+  document.querySelector('.dropdown .titleitems').dispatchEvent(new Event('change'));
+    //setTimeout is used so transition is properly shown
+  setTimeout(() => toggleClass(icon,'rotate-90',0));
+}
+
+
+//get elements
+const dropdownTitle = document.querySelector('.dropdown .titleitems');
+const dropdownOptions = document.querySelectorAll('.dropdown .option');
+
+//bind listeners to these elements
+dropdownTitle.addEventListener('click', toggleMenuDisplay);
+
+dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected));
+
+
+let modalProjectClose = document.querySelector('.modalitems-block__exit')
+let modalProjectOpen = document.querySelector('.items-block__change')
+let modalProject = document.querySelector('.modalitems')
+
+if(modalProjectOpen)
+  modalProjectOpen.addEventListener('click', function(){
+    modalProject.classList.toggle('active')
+    document.body.style.overflow = "hidden"
+  })
+if(modalProjectClose)
+  modalProjectClose.addEventListener('click', function(){
+    modalProject.classList.remove('active')
+    document.body.style.overflow = "visible"
+  })

@@ -23,5 +23,33 @@
         color: #000
       &:last-child
         margin-right: 0
+    &__change
+      border: 1px solid #FC6805
+      box-shadow: 3px 7px 7px rgba(252, 104, 5, 0.15)
+      padding: 5px 20px 5px 20px
+      display: inline-block
+      span
+        margin-right: 20px
+        font-family: 'Montserrat', sans-serif
+        font-weight: 700
+        font-size: 14px
+        line-height: 20px
+        color: #0B5C0B
+    &__changeInfo
+      display: flex
+      justify-content: space-between
+      align-items: center
+  .items-block.hide
+    display: none
 .hide
   display: none
+
+
+@media (max-width: 950px)
+  .items-block.visible
+    display: none
+  .items-block.hide
+    display: block !important
+@media (max-width: 600px)
+  .items-block.hide
+    margin-top: 20px
