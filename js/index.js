@@ -104,20 +104,24 @@ if (menuBtn) {
   })
 }
 
-if (menu) {
-  menu.addEventListener('click', function () {
+const hideMenu = document.querySelector('.menu-block')
+const menuBg = document.querySelector('.menu-bg')
+document.addEventListener('click', (e)=> {
+  if (e.target === menuBg){
     menu.classList.remove('burgershow')
-  })
-}
+  }
+})
 
-const faqItem = document.querySelectorAll('.point-block__item')
+//FAQ
 
-// if (faqItem)
-//   faqItem.forEach(function (open) {
-//     let faqHead = open.querySelector('.point-block__title')
-//     let faqBody = open.querySelector('.point-block__info')
+// const faqItems = document.querySelectorAll('.point-block__item')
+
+// if (faqItems)
+//   faqItems.forEach((item) => {
+//     const faqHead = item.querySelector('.point-block__title')
+//     const faqBody = item.querySelector('.point-block__info')
 //     faqHead.addEventListener('click', function () {
-//       faqBody.classList.toggle('active')
+//       item.classList.toggle('active')
 //     });
 //   });
 
