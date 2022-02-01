@@ -34,18 +34,23 @@ if (document.querySelector('.swiper')) {
     },
     pagination: {
       el: '.swiper-pagination',
+      type: 'bullets',
       clickable: true,
-      // renderBullet: function (index, className) {
-      //   const bullet = document.createElement('div')
-      //   const bulletImg = document.createElement('img')
-      //   bulletImg.setAttribute('src', src)
-      //   bullet.append(bulletImg)
-      //   bullet.className = className
-      //   return bullet
-      // }
+      bulletClass: 'project-nav__item',
+      renderBullet: function (index, className) {
+        let projectSlides = document.querySelectorAll('.swiper-slide')
+        let navItem = index + 1
+        if (projectSlides[index])
+          navItem = projectSlides[index].querySelector('img')
+        const wrapper = document.createElement("div")
+
+        wrapper.className = className
+        wrapper.append(navItem)
+        return wrapper
+      }
     },
-  });
-}
+  })
+};
 let active = document.querySelectorAll('.items-block__point')
 let hide = document.querySelectorAll('.hide')
 if (active)
@@ -106,8 +111,8 @@ if (menuBtn) {
 
 const hideMenu = document.querySelector('.menu-block')
 const menuBg = document.querySelector('.menu-bg')
-document.addEventListener('click', (e)=> {
-  if (e.target === menuBg){
+document.addEventListener('click', (e) => {
+  if (e.target === menuBg) {
     menu.classList.remove('burgershow')
   }
 })
