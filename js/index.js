@@ -32,23 +32,6 @@ if (document.querySelector('.swiper')) {
     autoplay: {
       delay: 4000,
     },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-      bulletClass: 'project-nav__item',
-      renderBullet: function (index, className) {
-        let projectSlides = document.querySelectorAll('.swiper-slide')
-        let navItem = index + 1
-        if (projectSlides[index])
-          navItem = projectSlides[index].querySelector('img')
-        const wrapper = document.createElement("div")
-
-        wrapper.className = className
-        wrapper.append(navItem)
-        return wrapper
-      }
-    },
   })
 };
 let active = document.querySelectorAll('.items-block__point')
@@ -109,6 +92,22 @@ if (menuBtn) {
   })
 }
 
+let modalProjectClose = document.querySelector('.modalitems-block__exit')
+let modalProjectOpen = document.querySelector('.items-block__change')
+let modalProject = document.querySelector('.modalitems')
+
+if (modalProjectOpen)
+  modalProjectOpen.addEventListener('click', function () {
+    modalProject.classList.toggle('active')
+    document.body.style.overflow = "hidden"
+  })
+if (modalProjectClose)
+  modalProjectClose.addEventListener('click', function () {
+    modalProject.classList.remove('active')
+    document.body.style.overflow = "visible"
+  })
+
+
 const hideMenu = document.querySelector('.menu-block')
 const menuBg = document.querySelector('.menu-bg')
 document.addEventListener('click', (e) => {
@@ -131,9 +130,7 @@ document.addEventListener('click', (e) => {
 //   });
 
 //Валидация
-$(document).ready(function () {
-  $("#cphone").mask("+7 (000) 000-00-00");
-})
+$("#cphone").mask("+7 (000) 000-00-00");
 $.validator.addMethod("pwcheckallowedchars", function (value) {
   return /^[a-zA-Zа-яА-я-()ёЁ ]+$/.test(value)
 }, "Недопустимое значение");
@@ -238,23 +235,9 @@ function handleOptionSelected(e) {
 const dropdownTitle = document.querySelector('.dropdown .titleitems');
 const dropdownOptions = document.querySelectorAll('.dropdown .option');
 
-dropdownTitle.addEventListener('click', toggleMenuDisplay);
+if (dropdownTitle)
+  dropdownTitle.addEventListener('click', toggleMenuDisplay);
 
 dropdownOptions.forEach(option => option.addEventListener('click', handleOptionSelected));
 
 //открытие фильтра
-
-let modalProjectClose = document.querySelector('.modalitems-block__exit')
-let modalProjectOpen = document.querySelector('.items-block__change')
-let modalProject = document.querySelector('.modalitems')
-
-if (modalProjectOpen)
-  modalProjectOpen.addEventListener('click', function () {
-    modalProject.classList.toggle('active')
-    document.body.style.overflow = "hidden"
-  })
-if (modalProjectClose)
-  modalProjectClose.addEventListener('click', function () {
-    modalProject.classList.remove('active')
-    document.body.style.overflow = "visible"
-  })
