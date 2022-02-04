@@ -23,6 +23,8 @@
         color: #000
       &:last-child
         margin-right: 0
+      &.active
+        border: 1px solid #FC6805
     &__change
       border: 1px solid #FC6805
       box-shadow: 3px 7px 7px rgba(252, 104, 5, 0.15)
@@ -44,17 +46,27 @@
 .hide
   display: none
 
-
-@media (max-width: 950px)
+@media (max-width: 1250px)
+  .items
+    &-block
+      &__point
+        margin-right: 10px
+        padding: 5px 8px 5px 8px
+        span
+          font-size: 16px
+@media (max-width: 1050px)
   .items-block.visible
     display: none
   .items-block.hide
     display: block !important
+    margin-top: 20px
 @media (max-width: 600px)
   .items-block.hide
     margin-top: 20px
   .items
     padding-top: 20px
+  .items-block.hide
+    margin-bottom: 20px
 @media (max-width: 500px)
   .items
     &-block

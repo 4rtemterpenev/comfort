@@ -4,7 +4,7 @@
     flex-direction: row
     justify-content: space-between
     &__action
-      width: calc( 60% - 70px )
+      width: calc( 55% - 70px )
       margin-top: 50px
     &__image
       margin-bottom: 80px
@@ -13,7 +13,7 @@
       img
         box-shadow: 0px 8px 10px rgba(11, 92, 11, 0.25)
     &__inputs input
-      width: 80%
+      width: 100%
       margin-top: 32px
       padding-left: 30px
       padding-right: 30px
@@ -29,7 +29,7 @@
       outline: none
       border: 1px solid #858585
     &__textarea textarea
-      width: 80%
+      width: 100%
       margin-top: 32px
       resize: none
       height: 300px
@@ -72,6 +72,13 @@
       flex-direction: column
     &__inputs
       width: 100%
+    &__images.showd
+      display: block
+      width: 45%
+    &__image
+      width: 100%
+      img
+        width: 100%
 .disabled
   color: #0B5C0B
   background-color: #fff
@@ -82,11 +89,14 @@
 
 @media (max-width: 1170px)
   .form-block
-    flex-direction: column
+    &__action
+      width: 50%
+@media (max-width: 850px)
+  .form-block
     &__action
       width: 100%
-  .showd
-    display: none
+    &__images.showd
+      display: none
 @media (max-width: 550px)
   .invis
     display: block
@@ -103,12 +113,14 @@
     line-height: 20px
     padding-left: 15px
     margin-top: 20px
+    width: 100%
   .form-block__textarea textarea
     border-radius: 20px
     font-size: 14px
     line-height: 20px
     padding-left: 15px
     margin-top: 20px
+    width: 100%
   .form-block__btn
     width: 100%
     margin-top: 30px

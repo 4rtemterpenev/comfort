@@ -1,7 +1,14 @@
 .point
   &-block
+    &.mobile 
+      display: none
     &__item
       margin-top: 85px
+      &.opened
+        .point-block
+          &__info
+            display: block
+            border: none !important
     &__images
       display: flex
       flex-direction: row
@@ -10,19 +17,13 @@
       padding-bottom: 80px
     &__info
       display: none
-    &__title
-      margin-bottom: 50px
-      &:last-child
-        margin-bottom: 0
     &__arrow
       display: flex
       align-items: center
       justify-content: center
-.point-block__info.active
-  display: block 
-  border: none !important
-.point-block.mobile
-  display: none
+  .point-block.mobile .point-block__item
+    margin-bottom: 30px
+
 @media (max-width: 1250px)
   .point
     &-block
@@ -39,6 +40,10 @@
 @media (max-width: 550px)
   .point
     &-block
+      &.hidden
+        display: none
+      &.mobile 
+        display: block
       &__item
         margin-top: 20px
       &__images
@@ -54,7 +59,3 @@
         flex-direction: row
         justify-content: space-between
 
-  .point-block.hidden
-    display: none
-  .point-block.mobile
-    display: block
