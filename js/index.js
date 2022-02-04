@@ -56,6 +56,15 @@ if (document.querySelector('.popular-slider')) {
 };
 
 
+const modalOpen = document.querySelector('.footer-block__btn')
+
+if (modalOpen)
+  modalOpen.addEventListener('click', function(){
+    modal.classList.add('activity')
+    document.body.style.overflow = "hidden"
+  })
+
+
 let active = document.querySelectorAll('.items-block__point')
 let hide = document.querySelectorAll('.hide')
 
