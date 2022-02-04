@@ -1,5 +1,6 @@
 
 let header = document.querySelector('.head')
+
 window.onscroll = function () {
   if (window.pageYOffset > 70) {
     header.style.background = "rgba(0, 0, 0, 0.7)";
@@ -22,20 +23,43 @@ if (document.querySelector('#swiper-recall')) {
   })
 };
 
-if (document.querySelector('.swiper')) {
-  const MySwiper = new Swiper('.swiper', {
-    spaceBetween: 30,
+
+if (document.querySelector('.popular-slider')) {
+  const popularSlider = new Swiper('.popular-slider', {
+    spaceBetween: 0,
     slidesPerView: 1,
     speed: 600,
     effect: 'fade',
-    loop: true,
+    // loop: true,
     autoplay: {
       delay: 4000,
     },
+    pagination: {
+      el: '.popular-pagination',
+      type: 'bullets',
+      clickable: true,
+      bulletClass: 'popular-pagination-item',
+      bulletActiveClass: 'active',
+      dynamicBullets: true,
+      renderBullet: function (index, className) {
+        var wrapper = document.createElement('div')
+        var item = document.createElement('img')
+        var path = this.slides[index].querySelector('img').getAttribute('src')
+        item.src = path
+        wrapper.append(item)
+        item.className = className
+
+        return wrapper.innerHTML;
+      }
+    },
   })
 };
+
+
 let active = document.querySelectorAll('.items-block__point')
 let hide = document.querySelectorAll('.hide')
+
+
 if (active)
   active.forEach(function (entry) {
     entry.addEventListener('click', function () {
@@ -43,6 +67,7 @@ if (active)
       hide.classList.toggle('hide')
     });
   });
+
 
 let herobtn = document.querySelector('.hero-block__btn')
 let modal = document.querySelector('.modal')
@@ -54,6 +79,7 @@ if (herobtn) {
     document.body.style.overflow = "hidden"
   })
 }
+
 if (exit) {
   exit.addEventListener('click', function () {
     modal.classList.remove('activity')
@@ -75,6 +101,7 @@ if (openmodal)
     });
   });
 
+
 if (exitmodal) {
   exitmodal.addEventListener('click', function () {
     recallmodal.classList.remove('show')
@@ -89,8 +116,10 @@ let menublock = document.querySelector('.menu-block')
 if (menuBtn) {
   menuBtn.addEventListener('click', function () {
     menu.classList.add('burgershow')
+    menuBg.classList.toggle('active')
   })
 }
+
 
 let modalProjectClose = document.querySelector('.modalitems-block__exit')
 let modalProjectOpen = document.querySelector('.items-block__change')
@@ -101,6 +130,8 @@ if (modalProjectOpen)
     modalProject.classList.toggle('active')
     document.body.style.overflow = "hidden"
   })
+
+
 if (modalProjectClose)
   modalProjectClose.addEventListener('click', function () {
     modalProject.classList.remove('active')
@@ -113,27 +144,29 @@ const menuBg = document.querySelector('.menu-bg')
 document.addEventListener('click', (e) => {
   if (e.target === menuBg) {
     menu.classList.remove('burgershow')
+    menuBg.classList.remove('active')
   }
 })
 
 //FAQ
 
-// const faqItems = document.querySelectorAll('.point-block__item')
+const faqItems = document.querySelectorAll('.point-block.mobile .point-block__item')
 
-// if (faqItems)
-//   faqItems.forEach((item) => {
-//     const faqHead = item.querySelector('.point-block__title')
-//     const faqBody = item.querySelector('.point-block__info')
-//     faqHead.addEventListener('click', function () {
-//       item.classList.toggle('active')
-//     });
-//   });
+if (faqItems.length > 0)
+  faqItems.forEach((item) => {
+    const faqHead = item.querySelector('.point-block__title')
+    faqHead.addEventListener('click', () => {
+      item.classList.toggle('opened')
+    })
+  });
 
 //Валидация
 $("#cphone").mask("+7 (000) 000-00-00");
+
 $.validator.addMethod("pwcheckallowedchars", function (value) {
   return /^[a-zA-Zа-яА-я-()ёЁ ]+$/.test(value)
 }, "Недопустимое значение");
+
 $('.form-block__action').validate({
   rules: {
     cname: {
@@ -194,7 +227,6 @@ $('.form-block__action').validate({
 });
 
 //Выбор фильтра
-
 function toggleClass(elem, className) {
   if (elem.className.indexOf(className) !== -1) {
     elem.className = elem.className.replace(className, '');
@@ -239,5 +271,3 @@ if (dropdownTitle)
   dropdownTitle.addEventListener('click', toggleMenuDisplay);
 
 dropdownOptions.forEach(option => option.addEventListener('click', handleOptionSelected));
-
-//открытие фильтра
