@@ -1,5 +1,5 @@
 .trim
-  padding-top: 20px
+  padding-top: 100px
   &-block
     &__item
       display: flex
@@ -11,10 +11,11 @@
     &__title
       font-family: 'Montserrat', sans-serif
       font-weight: 500
-      font-size: 18px
+      font-size: 18px 
       line-height: 23px
       color: #000
-      margin-left: 20px
+      margin-left: 50px
+      margin-top: 20px
     &__points ul
       list-style: none
       li
@@ -44,3 +45,11 @@
           left: -55px
           background-color: #FC6805
           margin: 0px 10px 0px 10px
+
+          
+@media (max-width: 650px)
+  .trim
+    &-block
+      &__title
+        font-size: 14px
+        line-height: 22px

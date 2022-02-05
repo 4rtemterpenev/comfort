@@ -59,7 +59,9 @@
     justify-content: space-between
     align-items: flex-start
     flex-direction: row
-    margin-top: 15px
+    margin-top: 30px
+    &__characteristic
+      margin-bottom: 15px
     &__info
       width: calc(100% - 690px) // 100% - (ширина слайдера + ширина отступа между)
     &__title
@@ -290,6 +292,8 @@
         justify-content: center
       &__btn a
         padding: 5px 50px 5px 50px
+      &__btn 
+        margin-right: 0
   .block.disabled
     display: none
   .popular-block__slider.active

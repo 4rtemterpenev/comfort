@@ -158,14 +158,15 @@ document.addEventListener('click', (e) => {
 })
 
 //FAQ
-
 const faqItems = document.querySelectorAll('.point-block.mobile .point-block__item')
 
 if (faqItems.length > 0)
   faqItems.forEach((item) => {
     const faqHead = item.querySelector('.point-block__title')
+    const faqArrow = item.querySelector('.point-block__arrow')
     faqHead.addEventListener('click', () => {
       item.classList.toggle('opened')
+      faqArrow.classList.toggle('rotate-90')
     })
   });
 
