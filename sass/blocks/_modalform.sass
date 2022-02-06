@@ -17,7 +17,7 @@
       margin: 0 auto
       height: 100%
     &__window
-      width: 30%
+      width: 25%
       height: 60%
       background-color: #fff
       border-radius: 25px
@@ -65,3 +65,40 @@
       text-align: center
 .modalform.active
   display: block
+
+@media (max-width: 1250px)
+  .modalform-block
+    &__window
+      width: 30%
+@media (max-width: 1000px)
+  .modalform-block
+    &__window
+      width: 40%
+@media (max-width: 800px)
+  .modalform-block
+    &__window
+      width: 40%
+@media (max-width: 700px)
+  .modalform-block
+    &__window
+      width: 55%
+@media (max-width: 650px)
+  .modalform-block
+    &__window
+      width: 55%
+    &__title
+      font-size: 18px
+      line-height: 24px
+    &__subtitle
+      font-size: 14px
+      line-height: 20px
+@media (max-width: 500px)
+  .modalform-block
+    &__window
+      width: 80%
+@media (max-width: 375px)
+  .modalform-block
+    &__window
+      width: 80%
+    &__btn
+      padding: 5px 30px 5px 30px
