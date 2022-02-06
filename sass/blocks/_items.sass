@@ -2,6 +2,8 @@
   padding-top: 100px
   &-block
     margin-top: 45px
+    &.hide
+      margin-bottom: 20px
     &__points
       display: flex
       flex-direction: row
@@ -28,15 +30,9 @@
     &__change
       border: 1px solid #FC6805
       box-shadow: 3px 7px 7px rgba(252, 104, 5, 0.15)
-      padding: 5px 20px 5px 20px
+      padding: 10px 20px 10px 20px
       display: inline-block
-      span
-        margin-right: 20px
-        font-family: 'Montserrat', sans-serif
-        font-weight: 700
-        font-size: 14px
-        line-height: 20px
-        color: #0B5C0B
+      width: 90%
     &__changeInfo
       display: flex
       justify-content: space-between
@@ -60,6 +56,16 @@
   .items-block.hide
     display: block !important
     margin-top: 20px
+  .items-block__change
+    width: 60%
+  .dropdown .option
+    margin-bottom: 20px !important
+@media (max-width: 900px)
+  .items-block__change
+    width: 70%
+@media (max-width: 750px)
+  .items-block__change
+    width: 90%
 @media (max-width: 600px)
   .items-block.hide
     margin-top: 20px
@@ -67,9 +73,5 @@
     padding-top: 20px
   .items-block.hide
     margin-bottom: 20px
-@media (max-width: 500px)
-  .items
-    &-block
-      &__change
-        font-size: 12px
-        line-height: 18px
+  .items-block__change
+    width: 100%

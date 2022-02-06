@@ -131,22 +131,6 @@ if (menuBtn) {
 }
 
 
-let modalProjectClose = document.querySelector('.modalitems-block__exit')
-let modalProjectOpen = document.querySelector('.items-block__change')
-let modalProject = document.querySelector('.modalitems')
-
-if (modalProjectOpen)
-  modalProjectOpen.addEventListener('click', function () {
-    modalProject.classList.toggle('active')
-    document.body.style.overflow = "hidden"
-  })
-
-
-if (modalProjectClose)
-  modalProjectClose.addEventListener('click', function () {
-    modalProject.classList.remove('active')
-    document.body.style.overflow = "visible"
-  })
 
 
 const hideMenu = document.querySelector('.menu-block')
