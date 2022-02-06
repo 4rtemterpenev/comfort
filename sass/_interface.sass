@@ -140,9 +140,6 @@
 .show
   display: block !important
 .burger-menu
-  position: fixed
-  left: 10px
-  top: 20px
   display: none
 .image
   width: 100%
@@ -159,7 +156,9 @@
     width: 90%
 @media (max-width: 870px)
   .burger-menu
-    display: block
+    display: flex
+    align-items: center
+    justify-content: center
 @media (max-width: 720px)
   .foothide
     display: none !important
