@@ -126,6 +126,7 @@ if (menuBtn) {
   menuBtn.addEventListener('click', function () {
     menu.classList.add('burgershow')
     menuBg.classList.toggle('active')
+    document.body.style.overflow = "hidden"
   })
 }
 
@@ -154,6 +155,7 @@ document.addEventListener('click', (e) => {
   if (e.target === menuBg) {
     menu.classList.remove('burgershow')
     menuBg.classList.remove('active')
+    document.body.style.overflow = "auto"
   }
 })
 
